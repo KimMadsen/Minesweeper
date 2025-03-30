@@ -30,15 +30,16 @@
   mark the changes with {HANDMODIFIED....
 
   Two types of mistakes was made:
-    1) thinking that InflateRect is a function. It is a procedure.
-       so requires to be on a separate line. Eg.
-
+  
+    * thinking that InflateRect is a function. It is a procedure.
+       so requires to be on a separate line.
+       
         DrawFlag(ACanvas, InflateRect(DestRect, -BEVEL_WIDTH-1, -BEVEL_WIDTH-1));
 
-    2) not specifying correct paranthesis for a statement:
-
+    * not specifying correct paranthesis for a statement:
+    
           else if FGameState in [gsWon, gsLost] and (FEndTime > FStartTime) then
-
+          
        Which fails because of missing paranthesis around the FGameState in [...] part.
 
   In addition it forgot to link the imgBoardMouseDown event handler, that it did produce
